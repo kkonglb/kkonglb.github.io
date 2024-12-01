@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>如何解决使用git clone之类的git bash命令行时速度很慢的问题</title>
+      <link href="/2024/12/01/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E4%BD%BF%E7%94%A8git-clone%E4%B9%8B%E7%B1%BB%E7%9A%84git-bash%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%97%B6%E9%80%9F%E5%BA%A6%E5%BE%88%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+      <url>/2024/12/01/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E4%BD%BF%E7%94%A8git-clone%E4%B9%8B%E7%B1%BB%E7%9A%84git-bash%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%97%B6%E9%80%9F%E5%BA%A6%E5%BE%88%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h1 id="出现的问题"><a href="#出现的问题" class="headerlink" title="出现的问题"></a>出现的问题</h1><p>我们平常使用git clone用来克隆github仓库时会出现速度很慢的问题，有时候不仅速度很慢，而且还可能会直接失败，可是我们已经开启代理了，直接访问github也十分的流畅，但就是使用git bash时就一直出问题。这是因为虽然我们已经开启代理了，但是git是没有开启代理的，我们需要自己设置。</p><h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>看这两篇文章应该就够了。这两篇看懂了就不需要看下面的了，下面的都是我随便写的一点</p><p><a href="https://blog.csdn.net/weixin_45685193/article/details/120606369">关于git配置代理的方法和一些需要注意的细节</a></p><p><a href="https://blog.csdn.net/qq_55888300/article/details/131498092">在windows中如何查看代理的地址和端口</a></p><p>看代理IP地址和端口这样也可以</p><p>在设置里搜索 代理 找到自己的这两项（前提是自己必须有代理），在代理中其实也可以直接找到这个端口，应该设置里面都有，可以自己看一下。</p><p><img src="https://cdn.jsdelivr.net/gh/kkonglb/image/image-20241201103720668.png" alt="image-20241201103720668"></p><p>总结一下就是我们上面输入的命令行操作其实就是为了修改[用户目录].gitconfig中的内容。</p><p>可以直接<code>cat ~/.gitconfig</code>看看成功了没</p><p><img src="https://cdn.jsdelivr.net/gh/kkonglb/image/image-20241201111140246.png" alt="image-20241201111140246"></p><p>看来是成功了，那个lowspeedlimit和lowspeedtime不用管，忘了是什么时候设置的了。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>状态压缩</title>
       <link href="/2024/11/29/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9DP/"/>
       <url>/2024/11/29/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9DP/</url>
